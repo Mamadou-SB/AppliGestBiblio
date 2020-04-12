@@ -5,6 +5,12 @@
  */
 package Vues;
 
+import Models.Ouvrages;
+import Models.Exemplaires;
+import Models.Emprunts;
+import Controleurs.Controleurs_Authentification;
+import javax.swing.JFrame;
+
 /**
  *
  * @author Samba
@@ -27,21 +33,282 @@ public class MenuGeneral extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        BtnOuvrages = new javax.swing.JButton();
+        BtnAuteurs = new javax.swing.JButton();
+        BtnLivres = new javax.swing.JButton();
+        BtnEmprunts = new javax.swing.JButton();
+        BtnDomaines = new javax.swing.JButton();
+        BtnMembres = new javax.swing.JButton();
+        BtnExemplaires = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle(" BIENVENUE A LA BIBLIOTHEQUE OUSMANE SEMBENE DE YOFF\n");
+        setFocusCycleRoot(false);
+        setFocusTraversalPolicyProvider(true);
+        setResizable(false);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Logo BOSY.JPG"))); // NOI18N
+        jLabel2.setAutoscrolls(true);
+
+        jPanel1.setBackground(new java.awt.Color(0, 51, 102));
+
+        BtnOuvrages.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Ouvrages.PNG"))); // NOI18N
+        BtnOuvrages.setToolTipText("Gestion des Ouvrages");
+        BtnOuvrages.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnOuvrages.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnOuvrages.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                BtnOuvragesMouseMoved(evt);
+            }
+        });
+        BtnOuvrages.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnOuvragesActionPerformed(evt);
+            }
+        });
+
+        BtnAuteurs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Auteurs.PNG"))); // NOI18N
+        BtnAuteurs.setToolTipText("Gestion des Auteurs");
+        BtnAuteurs.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnAuteurs.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnAuteurs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAuteursActionPerformed(evt);
+            }
+        });
+
+        BtnLivres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Livres.PNG"))); // NOI18N
+        BtnLivres.setToolTipText("Gestion des Livres");
+        BtnLivres.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnLivres.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnLivres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnLivresActionPerformed(evt);
+            }
+        });
+
+        BtnEmprunts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Emprunts.PNG"))); // NOI18N
+        BtnEmprunts.setToolTipText("Gestion des Emprunts");
+        BtnEmprunts.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnEmprunts.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnEmprunts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEmpruntsActionPerformed(evt);
+            }
+        });
+
+        BtnDomaines.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Livres 3.PNG"))); // NOI18N
+        BtnDomaines.setToolTipText("Gestion des Domaines");
+        BtnDomaines.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnDomaines.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnDomaines.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDomainesActionPerformed(evt);
+            }
+        });
+
+        BtnMembres.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Membres.PNG"))); // NOI18N
+        BtnMembres.setToolTipText("Gestion des Membres");
+        BtnMembres.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnMembres.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnMembres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnMembresActionPerformed(evt);
+            }
+        });
+
+        BtnExemplaires.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Exemplaire1.JPG"))); // NOI18N
+        BtnExemplaires.setToolTipText("Gestion des Exemplaires");
+        BtnExemplaires.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnExemplaires.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnExemplaires.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnExemplairesActionPerformed(evt);
+            }
+        });
+
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button quitter.PNG"))); // NOI18N
+        jButton8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Editeurs1.PNG"))); // NOI18N
+        jButton1.setToolTipText("Gestion des Editeurs");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnOuvrages))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnAuteurs, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnLivres, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnEmprunts, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnDomaines, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnMembres, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnExemplaires, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnOuvrages, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnAuteurs)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnLivres, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnEmprunts, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnDomaines, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnMembres, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnExemplaires, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(3, 3, 3))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnOuvragesMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnOuvragesMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnOuvragesMouseMoved
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        Controleurs_Authentification c_Authentification = new Controleurs_Authentification();
+        this.setVisible(false);
+       
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void BtnOuvragesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnOuvragesActionPerformed
+     JFrame a = new JFrame();
+     a.setContentPane(new Vues_Nature_Ouvrages());
+     a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     a.pack();
+     a.setVisible(true);   
+        
+    }//GEN-LAST:event_BtnOuvragesActionPerformed
+
+    private void BtnAuteursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAuteursActionPerformed
+     JFrame a = new JFrame();
+     a.setContentPane(new Vues_Auteurs());
+     a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     a.pack();
+     a.setVisible(true);
+    }//GEN-LAST:event_BtnAuteursActionPerformed
+
+    private void BtnLivresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLivresActionPerformed
+     JFrame a = new JFrame();
+     a.setContentPane(new Vues_Ouvrages());
+     a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     a.pack();
+     a.setVisible(true);   
+    }//GEN-LAST:event_BtnLivresActionPerformed
+
+    private void BtnEmpruntsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEmpruntsActionPerformed
+    JFrame a = new JFrame();
+     a.setContentPane(new Vues_Emprunts());
+     a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     a.pack();
+     a.setVisible(true);    
+    }//GEN-LAST:event_BtnEmpruntsActionPerformed
+
+    private void BtnDomainesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDomainesActionPerformed
+     JFrame a = new JFrame();
+     a.setContentPane(new Vues_Domaines());
+     a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     a.pack();
+     a.setVisible(true);
+     
+     this.dispose();
+    }//GEN-LAST:event_BtnDomainesActionPerformed
+
+    private void BtnMembresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMembresActionPerformed
+     JFrame a = new JFrame();
+     a.setContentPane(new Vues_Abonnees());
+     a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     a.pack();
+     a.setVisible(true);
+     this.setVisible(false);
+    }//GEN-LAST:event_BtnMembresActionPerformed
+
+    private void BtnExemplairesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnExemplairesActionPerformed
+       JFrame a = new JFrame();
+     a.setContentPane(new Vues_Exemplaires());
+     a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     a.pack();
+     a.setVisible(true);
+    }//GEN-LAST:event_BtnExemplairesActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JFrame a = new JFrame();
+     a.setContentPane(new Vues_Editeurs());
+     a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     a.pack();
+     a.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -69,6 +336,9 @@ public class MenuGeneral extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MenuGeneral.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +349,16 @@ public class MenuGeneral extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnAuteurs;
+    private javax.swing.JButton BtnDomaines;
+    private javax.swing.JButton BtnEmprunts;
+    private javax.swing.JButton BtnExemplaires;
+    private javax.swing.JButton BtnLivres;
+    private javax.swing.JButton BtnMembres;
+    private javax.swing.JButton BtnOuvrages;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

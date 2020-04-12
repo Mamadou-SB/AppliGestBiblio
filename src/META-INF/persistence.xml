@@ -2,6 +2,19 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="db_bosy?zeroDateTimeBehavior=convertToNullPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>Models.Domaines_1</class>
+    <class>Models.Auteurs_1</class>
+    <class>Vues.Emprunts_1</class>
+    <class>Models.Ouvrages_1</class>
+    <class>Vues.Exemplaires_1</class>
+    <class>Models.Domaines</class>
+    <class>Models.Exemplaires</class>
+    <class>Models.Auteurs</class>
+    <class>Models.Abonnes</class>
+    <class>Models.Ouvrages</class>
+    <class>Models.Editeurs</class>
+    <class>Models.NatureOuvrages</class>
+    <class>Models.Emprunts</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_bosy?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

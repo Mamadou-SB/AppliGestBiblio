@@ -5,24 +5,24 @@
  */
 package Vues;
 
-import Controleurs.C_Authentification;
+import Controleurs.Controleurs_Authentification;
 /**
  *
  * @author Samba
  */
 public class Authentification extends javax.swing.JFrame {
 
-    private C_Authentification c_authentification;
+    private Controleurs_Authentification c_authentification;
       
     /**
      * Creates new form Authentification
      */
-    public Authentification(C_Authentification c_authentification) {
+    public Authentification(Controleurs_Authentification c_authentification) {
         this.c_authentification = c_authentification;
         initComponents();
     }
 
-    private Authentification() {
+    Authentification() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -37,21 +37,21 @@ public class Authentification extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusCycleRoot(false);
-        setFocusTraversalPolicy(null);
         setIconImages(null);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 818, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 523, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
