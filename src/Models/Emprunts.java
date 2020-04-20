@@ -56,7 +56,7 @@ public class Emprunts implements Serializable {
     private String titre;
     @Basic(optional = false)
     @Column(name = "TypeOuvrage")
-    private int typeOuvrage;
+    private String typeOuvrage;
     @Basic(optional = false)
     @Column(name = "Emprunteur")
     private String emprunteur;
@@ -71,7 +71,7 @@ public class Emprunts implements Serializable {
         this.idEmprunt = idEmprunt;
     }
 
-    public Emprunts(Integer idEmprunt, String dateEmprunt, String dateRetour, String titre, int typeOuvrage, String emprunteur, String rendu) {
+    public Emprunts(Integer idEmprunt, String dateEmprunt, String dateRetour, String titre, String typeOuvrage, String emprunteur, String rendu) {
         this.idEmprunt = idEmprunt;
         this.dateEmprunt = dateEmprunt;
         this.dateRetour = dateRetour;
@@ -121,12 +121,12 @@ public class Emprunts implements Serializable {
         changeSupport.firePropertyChange("titre", oldTitre, titre);
     }
 
-    public int getTypeOuvrage() {
+    public String getTypeOuvrage() {
         return typeOuvrage;
     }
 
-    public void setTypeOuvrage(int typeOuvrage) {
-        int oldTypeOuvrage = this.typeOuvrage;
+    public void setTypeOuvrage(String typeOuvrage) {
+        String oldTypeOuvrage = this.typeOuvrage;
         this.typeOuvrage = typeOuvrage;
         changeSupport.firePropertyChange("typeOuvrage", oldTypeOuvrage, typeOuvrage);
     }
