@@ -240,6 +240,7 @@ public class MenuGeneral extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         Controleurs_Authentification c_Authentification = new Controleurs_Authentification();
         this.setVisible(false);
+        new MenuGeneral().setVisible(false);
        
     }//GEN-LAST:event_jButton8ActionPerformed
 

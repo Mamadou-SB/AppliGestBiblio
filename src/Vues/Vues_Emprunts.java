@@ -5,7 +5,9 @@
  */
 package Vues;
 
+import java.awt.Component;
 import java.awt.EventQueue;
+import java.awt.Window;
 import java.awt.print.PrinterException;
 import java.beans.Beans;
 import java.sql.Connection;
@@ -23,6 +25,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -262,6 +265,7 @@ public class Vues_Emprunts extends JPanel {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button quitter.PNG"))); // NOI18N
         jButton1.setText("Quitter");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(formListener);
 
         selectdateEmprunt.setText("Ajout date Emprunt");
         selectdateEmprunt.addActionListener(formListener);
@@ -464,6 +468,9 @@ public class Vues_Emprunts extends JPanel {
             else if (evt.getSource() == jButton2) {
                 Vues_Emprunts.this.jButton2ActionPerformed(evt);
             }
+            else if (evt.getSource() == jButton1) {
+                Vues_Emprunts.this.jButton1ActionPerformed(evt);
+            }
         }
     }// </editor-fold>//GEN-END:initComponents
 
@@ -546,6 +553,12 @@ public class Vues_Emprunts extends JPanel {
             Logger.getLogger(Vues_Emprunts.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         new MenuGeneral().setVisible(true);
+        Component a = SwingUtilities.getRoot(this);
+        ((Window)a).dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

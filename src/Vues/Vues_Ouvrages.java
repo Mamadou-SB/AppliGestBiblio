@@ -5,7 +5,9 @@
  */
 package Vues;
 
+import java.awt.Component;
 import java.awt.EventQueue;
+import java.awt.Window;
 import java.awt.print.PrinterException;
 import java.beans.Beans;
 import java.sql.Connection;
@@ -22,6 +24,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -330,6 +333,7 @@ public class Vues_Ouvrages extends JPanel {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/button quitter.PNG"))); // NOI18N
         jButton1.setText("Quitter");
+        jButton1.addActionListener(formListener);
 
         jPanel2.setBackground(new java.awt.Color(0, 51, 255));
 
@@ -542,6 +546,9 @@ public class Vues_Ouvrages extends JPanel {
             else if (evt.getSource() == jButton2) {
                 Vues_Ouvrages.this.jButton2ActionPerformed(evt);
             }
+            else if (evt.getSource() == jButton1) {
+                Vues_Ouvrages.this.jButton1ActionPerformed(evt);
+            }
         }
     }// </editor-fold>//GEN-END:initComponents
 
@@ -631,6 +638,12 @@ public class Vues_Ouvrages extends JPanel {
             Logger.getLogger(Vues_Ouvrages.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         new MenuGeneral().setVisible(true);
+        Component a = SwingUtilities.getRoot(this);
+        ((Window)a).dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

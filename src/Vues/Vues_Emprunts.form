@@ -530,6 +530,9 @@
           <Color id="Curseur en forme de main"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
     </Component>
